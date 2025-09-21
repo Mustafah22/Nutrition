@@ -1,298 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Therapeutic Nutrition Doctor</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                  url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?fit=crop&w=1600&q=80') no-repeat center center;
-      background-size: cover;
-      color: white;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .service-card {
-      transition: transform 0.3s ease-in-out;
-    }
-    .service-card:hover {
-      transform: translateY(-10px);
-    }
-    footer {
-      background: #2c3e50;
-      color: white;
-      padding: 40px 0;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Hero Section -->
-<section class="hero d-flex justify-content-center align-items-center">
-  <div class="container">
-    <h1>Food is Medicine. Let’s Heal Your Body Together.</h1>
-    <p class="lead mt-3">Personalized therapeutic nutrition plans tailored to your health, lifestyle, and goals.</p>
-    <a href="#services" class="btn btn-success btn-lg mt-4">Start Your Health Journey</a>
-  </div>
-</section>
-<!-- <section class="hero d-flex justify-content-center align-items-center text-center" 
-         style="background: linear-gradient(135deg, #27ae60, #2980b9); height: 100vh; color: white;">
-  <div class="container">
-    <h1 class="fw-bold display-4">Food is Medicine. <br> Let’s Heal Your Body Together.</h1>
-    <p class="lead mt-3">Personalized therapeutic nutrition plans for your unique health journey.</p>
-    <a href="#quiz" class="btn btn-light btn-lg shadow mt-4">Take the Free Health Quiz</a>
-  </div>
-</section> -->
-
-
-<!-- About Section -->
-<section id="about" class="py-5">
-  <div class="container text-center">
-    <h2>Meet Dr. [Name]</h2>
-    <p class="mt-3">
-      With over 10 years of experience in therapeutic nutrition, Dr. [Name] helps patients manage diabetes, digestive health,
-      weight challenges, and overall wellness through personalized nutrition strategies.
-    </p>
-    <a href="#contact" class="btn btn-outline-success mt-3">Book Your Consultation</a>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5">How We Can Help You</h2>
-    <div class="row g-4">
-      <div class="col-md-3">
-        <div class="card h-100 shadow service-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Personalized Nutrition Plans</h5>
-            <p class="card-text">Tailored to your unique medical needs and lifestyle.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100 shadow service-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Chronic Condition Management</h5>
-            <p class="card-text">Support for diabetes, hypertension, gut health, and more.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100 shadow service-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Weight & Lifestyle Coaching</h5>
-            <p class="card-text">Sustainable, science-based programs for long-term success.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100 shadow service-card">
-          <div class="card-body text-center">
-            <h5 class="card-title">Virtual Consultations</h5>
-            <p class="card-text">Get expert nutrition advice from the comfort of your home.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Health Quiz Section -->
-<section id="quiz" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Take Your Free Health Quiz</h2>
-    <p class="text-center text-muted mb-5">Answer 3 quick questions and get your personalized nutrition focus.</p>
-
-    <!-- Quiz Form -->
-    <form id="healthQuiz" class="p-4 shadow rounded bg-white">
-      <!-- Question 1 -->
-      <div class="mb-4">
-        <label class="form-label fw-bold">1. What is your primary goal?</label>
-        <select class="form-select" id="goal" required>
-          <option value="">-- Select an option --</option>
-          <option value="weight">Lose Weight</option>
-          <option value="energy">Boost Energy</option>
-          <option value="digestion">Improve Digestion</option>
-          <option value="diabetes">Manage Diabetes</option>
-        </select>
-      </div>
-
-      <!-- Question 2 -->
-      <div class="mb-4">
-        <label class="form-label fw-bold">2. How would you describe your lifestyle?</label>
-        <select class="form-select" id="lifestyle" required>
-          <option value="">-- Select an option --</option>
-          <option value="busy">Busy & On-the-Go</option>
-          <option value="sedentary">Mostly Sedentary</option>
-          <option value="active">Physically Active</option>
-        </select>
-      </div>
-
-      <!-- Question 3 -->
-      <div class="mb-4">
-        <label class="form-label fw-bold">3. Do you have a medical condition?</label>
-        <select class="form-select" id="condition" required>
-          <option value="">-- Select an option --</option>
-          <option value="none">No</option>
-          <option value="diabetes">Diabetes</option>
-          <option value="hypertension">High Blood Pressure</option>
-          <option value="digestive">Digestive Issues</option>
-        </select>
-      </div>
-
-      <!-- WhatsApp Capture -->
-      <div class="mb-4">
-        <label class="form-label fw-bold">4. Enter Your WhatsApp Number</label>
-        <input type="tel" class="form-control" id="whatsapp" placeholder="+9665XXXXXXXX" required>
-      </div>
-
-      <!-- Name Capture -->
-      <div class="mb-4">
-        <label class="form-label fw-bold">5. Your Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-      </div>
-
-      <button type="submit" class="btn btn-success w-100">See My Result</button>
-    </form>
-
-    <!-- Result Display -->
-    <div id="quizResult" class="mt-5 p-4 shadow rounded bg-white d-none">
-      <h4 class="mb-3">Your Nutrition Focus</h4>
-      <p id="resultText"></p>
-      <a id="whatsappLink" target="_blank" class="btn btn-success mt-3">Send to My WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- How It Works -->
-<section id="process" class="py-5">
-  <div class="container text-center">
-    <h2>Your 3-Step Wellness Journey</h2>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <h4>Step 1</h4>
-        <p>Book Consultation – Clinic visit or online session.</p>
-      </div>
-      <div class="col-md-4">
-        <h4>Step 2</h4>
-        <p>Get Your Plan – A tailored nutrition strategy designed for your body.</p>
-      </div>
-      <div class="col-md-4">
-        <h4>Step 3</h4>
-        <p>Track & Thrive – Follow your plan with our app and see progress.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section id="testimonials" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5">Real Results from Real Clients</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <blockquote class="blockquote">
-          “I lowered my blood sugar naturally within 3 months – Dr. [Name] guided me every step.”
-        </blockquote>
-        <footer class="blockquote-footer">Client A</footer>
-      </div>
-      <div class="col-md-6">
-        <blockquote class="blockquote">
-          “Finally a diet plan that feels doable and keeps me energized.”
-        </blockquote>
-        <footer class="blockquote-footer">Client B</footer>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Call to Action -->
-<section class="py-5 text-center">
-  <div class="container">
-    <h2>Ready to Take Control of Your Health?</h2>
-    <p class="lead mt-3">Join hundreds of patients who transformed their lives through therapeutic nutrition.</p>
-    <a href="#contact" class="btn btn-success btn-lg mt-4">Book Your First Consultation</a>
-  </div>
-</section>
-
-<!-- Contact / Footer -->
-<footer id="contact">
-  <div class="container text-center">
-    <h4>Get in Touch</h4>
-    <p>📍 Clinic Address | 📞 +966-XXX-XXXXXXX | ✉️ info@nutritiondoctor.com</p>
-    <div>
-      <a href="#" class="text-white me-3">Facebook</a>
-      <a href="#" class="text-white me-3">Instagram</a>
-      <a href="#" class="text-white">WhatsApp</a>
-    </div>
-    <hr class="mt-4">
-    <p class="mb-0">&copy; 2025 Therapeutic Nutrition Doctor | All Rights Reserved</p>
-  </div>
-</footer>
-
-
-
-<script>
-document.getElementById("healthQuiz").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const goal = document.getElementById("goal").value;
-  const lifestyle = document.getElementById("lifestyle").value;
-  const condition = document.getElementById("condition").value;
-  const name = document.getElementById("name").value;
-  const whatsapp = document.getElementById("whatsapp").value;
-
-  let resultMessage = `Hi ${name}, based on your quiz:\n\n`;
-
-  // Logic for nutrition suggestion
-  if (goal === "weight") {
-    resultMessage += "- Focus: Weight management with balanced meals & portion control.\n";
-  } else if (goal === "energy") {
-    resultMessage += "- Focus: Energy-boosting foods (whole grains, lean protein, hydration).\n";
-  } else if (goal === "digestion") {
-    resultMessage += "- Focus: Gut healing foods (probiotics, fiber, anti-inflammatory meals).\n";
-  } else if (goal === "diabetes") {
-    resultMessage += "- Focus: Diabetic-friendly plan for stable blood sugar.\n";
-  }
-
-  if (condition !== "none") {
-    resultMessage += `- Special Care: Condition considered – ${condition}.\n`;
-  }
-
-  if (lifestyle === "busy") {
-    resultMessage += "- Lifestyle: Quick, practical meal options for your busy schedule.\n";
-  } else if (lifestyle === "sedentary") {
-    resultMessage += "- Lifestyle: Light meals & portion awareness for sedentary lifestyle.\n";
-  } else if (lifestyle === "active") {
-    resultMessage += "- Lifestyle: Meals to fuel your activity & recovery.\n";
-  }
-
-  resultMessage += "\n👉 Next Step: Book a consultation with Dr. [Name] for your personalized full plan.";
-
-  // Display result
-  document.getElementById("resultText").innerText = resultMessage;
-  document.getElementById("quizResult").classList.remove("d-none");
-
-  // Generate WhatsApp Link
-  const waMessage = encodeURIComponent(resultMessage);
-  document.getElementById("whatsappLink").href = `https://wa.me/${whatsapp}?text=${waMessage}`;
-
-  // Reset form
-  document.getElementById("healthQuiz").reset();
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>U-FIT</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		
+		<!-- Favicons -->
+		<link href="assets/img/favicon.png" rel="icon">
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+		
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com" rel="preconnect">
+		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+		
+		<!-- Vendor CSS Files -->
+		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+		<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		
+		<!-- Main CSS File -->
+		<link href="assets/css/main.css" rel="stylesheet">
+		
+	</head>
+	
+	<body class="index-page">
+		
+		<header id="header" class="header d-flex align-items-center sticky-top">
+			<div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+				
+				<a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+					<!-- Uncomment the line below if you also wish to use an image logo -->
+					<!-- <img src="assets/img/logo.webp" alt=""> -->
+					<h1 class="sitename" style="font-family: apolo; letter-spacing: 2px;"><span style="color: #FD9F12;">U-</span><span style="color: #A9C41D;">FIT</span></h1>
+				</a>
+				
+				<nav id="navmenu" class="navmenu">
+					<ul>
+						<li><a href="#hero" class="active">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#quiz">Quiz</a></li>
+						<li><a href="#faq">FAQ</a></li>
+						<!-- 
+							<li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+							<ul>
+							<li><a href="#">Dropdown 1</a></li>
+							<li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+							<ul>
+							<li><a href="#">Deep Dropdown 1</a></li>
+							<li><a href="#">Deep Dropdown 2</a></li>
+							<li><a href="#">Deep Dropdown 3</a></li>
+							<li><a href="#">Deep Dropdown 4</a></li>
+							<li><a href="#">Deep Dropdown 5</a></li>
+							</ul>
+							</li>
+							<li><a href="#">Dropdown 2</a></li>
+							<li><a href="#">Dropdown 3</a></li>
+							<li><a href="#">Dropdown 4</a></li>
+							</ul>
+						</li> -->
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+				</nav>
+				
+				<div class="header-social-links">
+					<a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+					<a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+					<a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+					<a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+				</div>
+				
+			</div>
+		</header>
+		
+		<main class="main">
+			
+			<!-- Hero Section -->
+			<section id="hero" class="hero section">
+				
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+					
+					<div class="row align-items-center content">
+						<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+							<h2>Nutrition Meets Fitness Your Complete Path to Health</h2>
+							<p class="lead">Two experts. One mission. Helping you heal, grow stronger, and live your healthiest life through personalized nutrition and fitness.</p>
+							<div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+								<a href="#portfolio" class="btn btn-primary">Take Health Quiz</a>
+								<a href="#contact" class="btn btn-outline">Let's Connect</a>
+							</div>
+							<div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+								<div class="stat-item">
+									<span class="stat-number">5+</span>
+									<span class="stat-label">Years Experience</span>
+								</div>
+								<div class="stat-item">
+									<span class="stat-number">100+</span>
+									<span class="stat-label">Projects Completed</span>
+								</div>
+								<div class="stat-item">
+									<span class="stat-number">50+</span>
+									<span class="stat-label">Happy Clients</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="hero-image">
+								<img src="assets/img/profile/ufitlogo2.png" alt="Portfolio Hero Image" class="img-fluid" data-aos="zoom-out" data-aos-delay="300">
+								<div class="shape-1"></div>
+								<!-- <div class="shape-2"></div> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</section><!-- /Hero Section -->
+			
+			
+			<section id="about" class="about section light-background">
+				<div class="container section-title" data-aos="fade-up">
+					<h2>About</h2>
+					<div class="title-shape">
+						<svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+						</svg>
+					</div>
+					<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem</p>
+				</div>
+				
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+					<div class="row align-items-center"><!-- ✅ proper row -->
+						
+						<!-- LEFT: Image -->
+						<div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+							<div class="about-image text-center">
+								<img id="about-profile-img" alt="Profile Image" class="img-fluid rounded-4">
+							</div>
+						</div>
+						
+						<!-- RIGHT: Content -->
+						<div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+							<div class="about-content">
+								<!-- <span class="subtitle">About Us</span>
+								<h2>Our Team</h2> -->
+								
+								<!-- Toggle Buttons -->
+								<ul class="nav nav-pills justify-content-center about-toggle mb-4" id="aboutTab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active"
+										id="person1-tab"
+										data-bs-toggle="tab"
+										data-bs-target="#person1"
+										type="button"
+										role="tab"
+										aria-controls="person1"
+										aria-selected="true"
+										data-img="assets/img/profile/DR.png">
+											Eliot Johnson
+										</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link"
+										id="person2-tab"
+										data-bs-toggle="tab"
+										data-bs-target="#person2"
+										type="button"
+										role="tab"
+										aria-controls="person2"
+										aria-selected="false"
+										data-img="assets/img/profile/co.png">
+											Anna Smith
+										</button>
+									</li>
+								</ul>
+								
+								<!-- Tab Content -->
+								<div class="tab-content" id="aboutTabContent">
+									<div class="tab-pane fade show active" id="person1" role="tabpanel" aria-labelledby="person1-tab">
+										<!-- Person 1 info -->
+										<h2>UI/UX Designer &amp; Web Developer</h2>
+										
+										<p class="lead mb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+										
+										<p class="mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+										
+										<div class="personal-info">
+											<div class="row g-4">
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Name</span>
+														<span class="value">Eliot Johnson</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Phone</span>
+														<span class="value">+123 456 7890</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Age</span>
+														<span class="value">26 Years</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Email</span>
+														<span class="value">email@example.com</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Occupation</span>
+														<span class="value">Lorem Engineer</span>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Nationality</span>
+														<span class="value">Ipsum</span>
+													</div>
+												</div>												
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="person2" role="tabpanel" aria-labelledby="person2-tab">
+										<!-- Person 2 info -->
+										<h2>UI/UX Designer &amp; Web Developer</h2>
+										
+										<p class="lead mb-4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+										
+										<p class="mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+										
+										<div class="personal-info">
+											<div class="row g-4">
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Name</span>
+														<span class="value">Eliot Johnson</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Phone</span>
+														<span class="value">+123 456 7890</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Age</span>
+														<span class="value">26 Years</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Email</span>
+														<span class="value">email@example.com</span>
+													</div>
+												</div>
+												
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Occupation</span>
+														<span class="value">Lorem Engineer</span>
+													</div>
+												</div>
+												<div class="col-6">
+													<div class="info-item">
+														<span class="label">Nationality</span>
+														<span class="value">Ipsum</span>
+													</div>
+												</div>												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div><!-- /.row -->
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Services Section -->
+			<section id="services" class="services section">
+				
+				<!-- Section Title -->
+				<div class="container section-title" data-aos="fade-up">
+					<h2>Services</h2>
+					<div class="title-shape">
+						<svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+						</svg>
+					</div>
+					<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem</p>
+				</div><!-- End Section Title -->
+				
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+					
+					<div class="row align-items-center">
+						<div class="col-lg-4 mb-5 mb-lg-0">
+							<h2 class="fw-bold mb-4 servies-title">We specialize in creating customized wellness plans for individuals</h2>
+							<p class="mb-4">Holistic health considers the entire person. It includes physical, mental, and emotional well-being. Our approach acknowledges that health is multifaceted.</p>
+							<a href="#" class="btn btn-outline-primary">Schedule call</a>
+						</div>
+						<div class="col-lg-8">
+							<div class="row g-4">
+								
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+									<div class="service-item">
+										<i class="bi bi-activity icon"></i>
+										<h3><a href="service-details.html">Weight Management</a></h3>
+										<p>Custom meal plans to help you reach and sustain your goals.</p>
+									</div>
+								</div><!-- End Service Item -->
+								
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+									<div class="service-item">
+										<i class="bi bi-easel icon"></i>
+										<h3><a href="service-details.html">Energy &amp; Wellness</a></h3>
+										<p>Boost vitality with nutrient-rich plans tailored to your lifestyle.</p>
+									</div>
+								</div><!-- End Service Item -->
+								
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+									<div class="service-item">
+										<i class="bi bi-broadcast icon"></i>
+										<h3><a href="service-details.html">Condition Support</a></h3>
+										<p>Specialized nutrition for diabetes, digestive health, and more.</p>
+									</div>
+								</div><!-- End Service Item -->
+								
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+									<div class="service-item">
+										<i class="bi bi-bounding-box-circles icon"></i>
+										<h3><a href="service-details.html">Tempor incididunt ut labore</a></h3>
+										<p>Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
+									</div>
+								</div><!-- End Service Item -->
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</section><!-- /Services Section -->
+			
+			<!-- Quiz Section -->
+			<section class="quiz section light-background" id="quiz">
+			<div class="container section-title" data-aos="fade-up">
+			<h2>Health Quiz</h2>
+					<div class="title-shape">
+						<svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+						</svg>
+					</div>
+			</div>
+				<div class="container" data-aos="fade-up">
+					<!-- <h2 class="text-center mb-5">Health Quiz</h2> -->
+					<div class="row g-4 align-items-start">
+						
+						<!-- LEFT: Quiz Form -->
+						<div class="col-lg-6">
+							<form id="healthQuiz" class="quiz-form">
+								<label for="goal">What is your primary goal?</label>
+								<select id="goal" required>
+									<option value="weight">Lose Weight</option>
+									<option value="energy">Boost Energy</option>
+									<option value="digestion">Improve Digestion</option>
+									<option value="diabetes">Manage Diabetes</option>
+								</select>
+								
+								<label for="lifestyle">Your lifestyle:</label>
+								<select id="lifestyle" required>
+									<option value="sedentary">Sedentary</option>
+									<option value="busy">Busy Professional</option>
+									<option value="active">Active</option>
+								</select>
+								
+								<label for="condition">Do you have any conditions?</label>
+								<select id="condition">
+									<option value="none">None</option>
+									<option value="diabetes">Diabetes</option>
+									<option value="digestive">Digestive Issues</option>
+								</select>
+								
+								<button type="submit" class="btn btn-primary mt-3">See My Result</button>
+							</form>
+						</div>
+						
+						<!-- RIGHT: Results -->
+						<div class="col-lg-6">
+							<div id="quizResult" class="result-box">
+								<h3>Your Personalized Result</h3>
+								<p id="resultText">Awaiting your answers...</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			
+			<!-- End Quiz Section -->
+			
+			<!-- Faq Section -->
+			<section id="faq" class="faq section">
+				
+				<!--Section Title-->
+				<div class="container section-title" data-aos="fade-up">
+					<h2>Frequently Asked Questions</h2>
+					<div class="title-shape">
+						<svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+						</svg>
+					</div>
+					<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem</p>
+				</div><!-- End Section Title -->
+				
+				<div class="container">
+					
+					<div class="row justify-content-center">
+						
+						<div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+							
+							<div class="faq-container">
+								
+								<div class="faq-item faq-active">
+									<h3>Non consectetur a erat nam at lectus urna duis?</h3>
+									<div class="faq-content">
+										<p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div><!-- End Faq item -->
+								
+								<div class="faq-item">
+									<h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
+									<div class="faq-content">
+										<p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div><!-- End Faq item-->
+								
+								<div class="faq-item">
+									<h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+									<div class="faq-content">
+										<p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div><!-- End Faq item-->
+								
+								<div class="faq-item">
+									<h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+									<div class="faq-content">
+										<p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div><!-- End Faq item-->
+								
+								<div class="faq-item">
+									<h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
+									<div class="faq-content">
+										<p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div><!-- End Faq item-->
+								
+								<div class="faq-item">
+									<h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
+									<div class="faq-content">
+										<p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
+									</div>
+									<i class="faq-toggle bi bi-chevron-right"></i>
+								</div><!-- End Faq item-->
+							</div>
+						</div>
+						
+					</div><!-- End Faq Column-->
+					
+				</div>
+				
+			</div>
+			
+		</section><!-- /Faq Section -->
+		
+		<!-- Contact Section -->
+		<section id="contact" class="contact section light-background">
+			
+			<div class="container" data-aos="fade-up" data-aos-delay="100">
+				
+				<div class="row g-5">
+					<div class="col-lg-6">
+						<div class="content" data-aos="fade-up" data-aos-delay="200">
+							<div class="section-category mb-3">Contact</div>
+							<h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
+							<p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+							
+							<div class="contact-info mt-5">
+								<div class="info-item d-flex mb-3">
+									<i class="bi bi-envelope-at me-3"></i>
+									<span>info@example.com</span>
+								</div>
+								
+								<div class="info-item d-flex mb-3">
+									<i class="bi bi-telephone me-3"></i>
+									<span>+1 5589 55488 558</span>
+								</div>
+								
+								<div class="info-item d-flex mb-4">
+									<i class="bi bi-geo-alt me-3"></i>
+									<span>A108 Adam Street, New York, NY 535022</span>
+								</div>
+								
+								<a href="#" class="map-link d-inline-flex align-items-center">
+									Open Map
+									<i class="bi bi-arrow-right ms-2"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-6">
+						<div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+							<div class="card-body p-4 p-lg-5">
+								
+								<form action="forms/contact.php" method="post" class="php-email-form">
+									<div class="row gy-4">
+										
+										<div class="col-12">
+											<input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+										</div>
+										
+										<div class="col-12 ">
+											<input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+										</div>
+										
+										<div class="col-12">
+											<input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+										</div>
+										
+										<div class="col-12">
+											<textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+										</div>
+										
+										<div class="col-12 text-center">
+											<div class="loading">Loading</div>
+											<div class="error-message"></div>
+											<div class="sent-message">Your message has been sent. Thank you!</div>
+											
+											<button type="submit" class="btn btn-submit w-100">Submit Message</button>
+										</div>
+										
+									</div>
+								</form>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</section><!-- /Contact Section -->
+		
+	</main>
+	
+	<footer id="footer" class="footer">
+		
+		<div class="container">
+			<div class="copyright text-center ">
+				<p>© <span>Copyright</span> <strong class="px-1 sitename" style="font-family: apolo; letter-spacing: 2px;"><span style="color: #FD9F12;">U-</span><span style="color: #A9C41D;">FIT</span></strong> <span>All Rights Reserved</span></p>
+			</div>
+			<div class="social-links d-flex justify-content-center">
+				<a href=""><i class="bi bi-twitter-x"></i></a>
+				<a href=""><i class="bi bi-facebook"></i></a>
+				<a href=""><i class="bi bi-instagram"></i></a>
+				<a href=""><i class="bi bi-linkedin"></i></a>
+			</div>
+			<div class="credits">
+				<!-- All the links in the footer should remain intact. -->
+				<!-- You can delete the links only if you've purchased the pro version. -->
+				<!-- Licensing information: https://bootstrapmade.com/license/ -->
+				<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+			</div>
+		</div>
+		
+	</footer>
+	
+	<!-- Scroll Top -->
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+	
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
+	
 </body>
-</html>
+
+</html>							
